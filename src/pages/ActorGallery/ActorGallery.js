@@ -1,6 +1,7 @@
 import { useState } from "react"
 import ActorModel from "../../model/ActorModel";
-import ActorCard from "../../components/ActorCard";
+import ActorCard from "../../components/ActorCard/ActorCard";
+import './ActorGallery.css';
 
 function ActorGallery(){
     const [actors, setActor] = useState([
@@ -13,6 +14,8 @@ function ActorGallery(){
     const cards = actors.map(actor=>
         <ActorCard actor={actor}></ActorCard>);
     return(
-        <div>{cards}</div>
+        <div className="gallery">{cards}</div>
     )
 }
+
+export default ActorGallery;
