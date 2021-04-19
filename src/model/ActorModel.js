@@ -1,5 +1,6 @@
 class ActorModel {
-    constructor(firstName, lastName, birthday, image, imdbLink) {
+    constructor(id, firstName, lastName, birthday, image, imdbLink) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthday = birthday;
@@ -7,8 +8,8 @@ class ActorModel {
         this.imdbLink = imdbLink;
     }
 
-    age(){
-        let birthYear = this.birthday;  //TODO extract birth year from the birthdate
+    age() {
+        let birthYear = this.birthday.split('-')[0];
         return new Date().getFullYear() - birthYear;
     }
 }

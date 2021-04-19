@@ -1,8 +1,12 @@
 .card{
-    flex:1;
-    padding:10px;
-    margin:10px;
+    padding:20px;
+    margin-top:10px;
     border:solid 1px lightgray;
+}
+.card > a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .card img{
     margin-top:20px;

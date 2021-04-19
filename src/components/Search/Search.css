@@ -1,0 +1,9 @@
+.search{
+    
+}
+.search > input{
+    width:100%;
+    height:40px;
+    border:solid 1px lightgray;
+    padding-left:10px;
+}
