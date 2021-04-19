@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/yuliama/movie-app/static/css/main.acdb5128.chunk.css",
+    "main.js": "/yuliama/movie-app/static/js/main.49e95ff0.chunk.js",
+    "main.js.map": "/yuliama/movie-app/static/js/main.49e95ff0.chunk.js.map",
+    "runtime-main.js": "/yuliama/movie-app/static/js/runtime-main.8cd37eed.js",
+    "runtime-main.js.map": "/yuliama/movie-app/static/js/runtime-main.8cd37eed.js.map",
+    "static/js/2.5472befe.chunk.js": "/yuliama/movie-app/static/js/2.5472befe.chunk.js",
+    "static/js/2.5472befe.chunk.js.map": "/yuliama/movie-app/static/js/2.5472befe.chunk.js.map",
+    "static/js/3.92f8738d.chunk.js": "/yuliama/movie-app/static/js/3.92f8738d.chunk.js",
+    "static/js/3.92f8738d.chunk.js.map": "/yuliama/movie-app/static/js/3.92f8738d.chunk.js.map",
+    "index.html": "/yuliama/movie-app/index.html",
+    "static/css/main.acdb5128.chunk.css.map": "/yuliama/movie-app/static/css/main.acdb5128.chunk.css.map",
+    "static/js/2.5472befe.chunk.js.LICENSE.txt": "/yuliama/movie-app/static/js/2.5472befe.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8cd37eed.js",
+    "static/js/2.5472befe.chunk.js",
+    "static/css/main.acdb5128.chunk.css",
+    "static/js/main.49e95ff0.chunk.js"
+  ]
+}
