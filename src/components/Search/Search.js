@@ -5,8 +5,8 @@ function Search({ setSearchTerm }) {
 
     return (
         <div className="search">
-            <input type="text" onChange={(e) => setSearchTerm(e.target.value)} placeholder="Please enter a name to filter actors"></input>
-
+            <input type="text" placeholder="Please enter a name to filter actors"></input>
+            {/* onChange={(e) => setSearchTerm(e.target.value)}  */}
         </div>
     )
 }
