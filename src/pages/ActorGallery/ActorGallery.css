@@ -1,12 +1,16 @@
-.gallery{
-    display:flex;
+.gallery {
+    display: flex;
     justify-content: space-between;
-    margin-top:20px;
+    margin-top: 20px;
     flex-wrap: wrap;
 }
 
-.container{
+.container {
     max-width: 1200px;
-    margin:50px auto;
+    margin: 50px auto;
     padding: 0 10px;
+}
+.container > .sortSearch {
+    width: 100%;
+    display: flex;
 }

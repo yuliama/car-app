@@ -2,6 +2,7 @@ import { useState } from "react"
 import ActorModel from "../../model/ActorModel";
 import ActorCard from "../../components/ActorCard/ActorCard";
 import Search from "../../components/Search/Search";
+import Sort from "../../components/Sort/Sort";
 import './ActorGallery.css';
 
 function ActorGallery() {
@@ -12,11 +13,21 @@ function ActorGallery() {
         new ActorModel(4, "Bob", "Odenkirk", "1962-10-22", "https://m.media-amazon.com/images/M/MV5BOWM5MDJjYTItMTRkNC00NTQ4LThkNjUtNDY3Mzk0YWMwMTBhXkEyXkFqcGdeQXVyNzQzNDYwMA@@._V1_UY317_CR18,0,214,317_AL_.jpg", "https://www.imdb.com/name/nm0644022/?ref_=tt_cl_t7")
     ]);
     const [searchTerm, setSearchTerm] = useState('');
-    const cards = actors.map(actor =>
-        <ActorCard id={actor.id} actor={actor}></ActorCard>);
+
+    const cards = actors.filter(findActors)
+        .map(actor =>
+            <ActorCard id={actor.id} actor={actor}></ActorCard>);
+
+    function findActors(actor) {
+        return actor.firstName.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
+            || actor.lastName.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
+    }
     return (
         <div className="container">
-            <Search onChange={setSearchTerm}></Search>
+            <div className="sortSearch"><Search onChange={term => setSearchTerm(term)}></Search>
+                <Sort></Sort>
+            </div>
+
             <div className="gallery">{cards}</div>
         </div>
     )

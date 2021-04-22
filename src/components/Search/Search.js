@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
 import './Search.css';
 
-function Search({ setSearchTerm }) {
-
+function Search({ onChange }) {
     return (
         <div className="search">
-            <input type="text" placeholder="Please enter a name to filter actors"></input>
-            {/* onChange={(e) => setSearchTerm(e.target.value)}  */}
+            <input type="text" placeholder="Please enter a name to filter actors" onChange={(e) => onChange(e.target.value)}></input>
         </div>
     )
 }
