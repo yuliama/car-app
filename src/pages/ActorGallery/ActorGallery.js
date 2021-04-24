@@ -13,6 +13,7 @@ function ActorGallery() {
         new ActorModel(4, "Bob", "Odenkirk", "1962-10-22", "https://m.media-amazon.com/images/M/MV5BOWM5MDJjYTItMTRkNC00NTQ4LThkNjUtNDY3Mzk0YWMwMTBhXkEyXkFqcGdeQXVyNzQzNDYwMA@@._V1_UY317_CR18,0,214,317_AL_.jpg", "https://www.imdb.com/name/nm0644022/?ref_=tt_cl_t7")
     ]);
     const [searchTerm, setSearchTerm] = useState('');
+    const [sortBy, setSortBy] = useState('firstName');
 
     const cards = actors.filter(findActors)
         .map(actor =>
@@ -22,10 +23,37 @@ function ActorGallery() {
         return actor.firstName.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
             || actor.lastName.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
     }
+
+    actors.sort((actor1, actor2) => {
+        if (sortBy === "age") {
+            if (actor1.age() > actor2.age()) {
+                return 1;
+            }
+            else if (actor1.age() < actor2.age()) {
+                return -1;
+            }
+            else {
+                return 0;
+            }
+        }
+        else {
+            if (actor1[sortBy] > actor2[sortBy]) {
+                return 1;
+            }
+            else if (actor1[sortBy] < actor2[sortBy]) {
+                return -1;
+            }
+            else {
+                return 0;
+            }
+        }
+    });
+
     return (
         <div className="container">
-            <div className="sortSearch"><Search onChange={term => setSearchTerm(term)}></Search>
-                <Sort></Sort>
+            <div className="sortSearch">
+                <Search onChange={term => setSearchTerm(term)}></Search>
+                <Sort onChange={sort => setSortBy(sort)}></Sort>
             </div>
 
             <div className="gallery">{cards}</div>
